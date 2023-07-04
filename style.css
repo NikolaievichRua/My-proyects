@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2E2F38;
+}
+
+.balls {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  box-shadow: 0 25vh #fff;
+}
+
+/*Bals are enumered from right to left, dont ask why.*/
+
+.ball {
+  margin: 0 0 0 69vw;
+  animation: balls 4s alternate infinite;
+}
+
+.ball2 {
+  margin: -10vw 0 0 57vw;
+  animation: balls 4s 0.1s alternate infinite;
+}
+
+.ball3 {
+  margin: -10vw 0 0 45vw;
+  animation: balls 4s 0.2s alternate infinite;
+}
+
+.ball4 {
+  margin: -10vw 0 0 33vw;
+  animation: balls 4s 0.3s alternate infinite;
+}
+
+.ball5 {
+  margin: -10vw 0 0 21vw;
+  animation: balls 4s 0.4s alternate infinite;
+}
+
+.squirrels {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: -10vw 0 0 18vw;
+  box-shadow: 0 calc(25vh + (10vh + 10vw - 7px) / 2) #E40000;
+  animation: squirrelmove 9s infinite linear;
+}
+
+.squirrel2 {
+  margin: -7px 0 0 18vw;
+  animation: squirrel2and3move 9s infinite ease-in;
+}
+
+.squirrel3 {
+  margin: -7px 0 0 18vw;
+  animation: squirrel2and3move 9s infinite ease-in-out;
+}
+
+.loading {
+  width: 240px;
+  height: 60px;
+  margin: calc(39vh + 10vw + 64px) auto 0 auto;
+}
+
+.loading > p {
+  display: inline-block;
+  position: relative;
+  top: -8px;
+  color: #fff;
+  font-size: 30px;
+  font-family: 'roboto mono', monospace;
+}
+
+.l {
+  animation: loading 8s alternate infinite;
+}
+
+.o {
+  animation: loading 8s 0.1s alternate infinite;
+}
+
+.a {
+  animation: loading 8s 0.2s alternate infinite;
+}
+
+.d {
+  animation: loading 8s 0.3s alternate infinite;
+}
+
+.i {
+  animation: loading 8s 0.4s alternate infinite;
+}
+
+.n {
+  animation: loading 8s 0.5s alternate infinite;
+}
+
+.g {
+  animation: loading 8s 0.6s alternate infinite;
+}
+
+.dote {
+  animation: loading 8s 0.7s alternate infinite;
+}
+
+.dote2 {
+  animation: loading 8s 0.8s alternate infinite;
+}
+
+.dote3 {
+  animation: loading 8s 0.9s alternate infinite;
+}
+
+@keyframes balls {
+  0% {
+    box-shadow: 0 25vh #fff;
+  }
+  
+  10% {
+    box-shadow: 0 35vh #fff;
+  }
+  
+  20% {
+    box-shadow: 0 25vh #fff;
+  }
+  
+  30% {
+    box-shadow: 0 35vh #fff;
+  }
+  
+  40% {
+    box-shadow: 0 25vh #fff;
+  }
+  
+  50% {
+    box-shadow: 0 35vh #fff;
+  }
+}
+
+@keyframes squirrelmove {
+  3.125% { /*HALF_UP*/
+    box-shadow: 0 calc(25vh - 8px) #E40000;
+  }
+  
+  6.25% { /*RIGHT_UP RUSHING IN BALL5*/
+    box-shadow: calc(3vw + (10vw - 8px) / 2) 21vh #E40000;
+  }
+  
+  9.375% { /*RIGHT_DOWN RUSHING OUT BALL5*/
+    box-shadow: calc(13vw + (2vw - 8px) / 2) calc(25vh - 8px) #E40000;
+  }
+  
+  12.5% { /*DOWN BETWEEN BALL5 AND 4*/
+    box-shadow: calc(13vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  15.625% { /*DOWN_RIGHT RUSHING IN BALL4*/
+    box-shadow: calc(13vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) calc(39vh + 10vw) #E40000;
+  }
+  
+  18.75% { /*RIGHT_UP RUSHING OUT BALL4*/
+    box-shadow: calc(25vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  21.875% { /*UP BETWEEN BALL4 AND 3*/
+    box-shadow: calc(25vw + (2vw - 8px) / 2) calc(25vh - 8px) #E40000;
+  }
+  
+  25% { /*UP_RIGHT RUSHING IN BALL3*/
+    box-shadow: calc(25vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) 21vh #E40000;
+  }
+  
+  28.125% { /*RIGHT_DOWN RUSHING OUT BALL3*/
+    box-shadow: calc(37vw + (2vw - 8px) / 2) calc(25vh - 8px) #E40000;
+  }
+  
+  31.25% { /*DOWN BETWEEN BALL3 AND 2*/
+    box-shadow: calc(37vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  34.375% { /*DOWN_RIGHT RUSHING IN BALL2*/
+    box-shadow: calc(37vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) calc(39vh + 10vw) #E40000;
+  }
+  
+  37.5% { /*RIGHT_UP RUSHING OUT BALL2*/
+    box-shadow: calc(49vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  40.625% { /*UP BETWEEN BALL2 AND 1*/
+    box-shadow: calc(49vw + (2vw - 8px) / 2) calc(25vh - 8px) #E40000;
+  }
+  
+  43.75% { /*UP_RIGHT RUSHING IN BALL1*/
+    box-shadow: calc(49vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) 21vh #E40000;
+  }
+  
+  46.875% { /*RIGHT_DOWN RUSHING OUT BALL1*/
+    box-shadow: calc(61vw + (2vw - 8px) / 2) calc(25vh - 8px) #E40000;
+  }
+  
+  50% { /*HALF_DOWN ===HALF ANIMATION===*/
+    box-shadow: calc(61vw + (2vw - 8px) / 2) calc(25vh + (10vh + 10vw - 8px) / 2) #E40000;
+  }
+  
+  53.125% { /*HALF_DOWN AFTER BALL1*/
+    box-shadow: calc(61vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  56.25% { /*DOWN_LEFT RUSHING IN BALL1*/
+    box-shadow: calc(49vw + (2vw - 8px) / 2 + (10vw -8px) / 2) calc(39vh + 10vw) #E40000;
+  }
+  
+  59.375% { /*LEFT_UP RUSHING OUT BALL1*/
+    box-shadow: calc(49vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  62.5% { /*UP BETWEEN BALL1 AND 2*/
+    box-shadow: calc(49vw + (2vw - 8px) / 2) calc(25vh - 10px) #E40000;
+  }
+  
+  65.625% { /*UP_LEFT RUSHING IN BALL2*/
+    box-shadow: calc(37vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) 21vh #E40000;
+  }
+  
+  68.75% { /*LEFT_DOWN RUSHING OUT BALL2*/
+    box-shadow: calc(37vw + (2vw - 8px) / 2) calc(25vh - 8px) #E40000;
+  }
+  
+  71.875% { /*DOWN BETWEEN BALL2 AND 3*/
+    box-shadow: calc(37vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  75% { /*DOWN_LEFT RUSHING IN BALL3*/
+    box-shadow: calc(25vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) calc(39vh + 10vw) #E40000;
+  }
+  
+  78.125% { /*LEFT_UP RUSHING OUT BALL3*/
+    box-shadow: calc(25vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  81.25% { /*UP BETWEEN BALL3 AND 4*/
+    box-shadow: calc(25vw + (2vw - 8px) / 2) calc(25vh - 8px) #E40000;
+  }
+  
+  84.375% { /*UP_LEFT RUSHING IN BALL4*/
+    box-shadow: calc(13vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) 21vh #E40000;
+  }
+  
+  87.5% { /*LEFT_DOWN RUSHING OUT BALL4*/
+    box-shadow: calc(13vw + (2vw - 8px) / 2) calc(25vh - 8px) #E40000;
+  }
+  
+  90.625% { /*DOWN BETWEEN BALL4 AND 5*/
+    box-shadow: calc(13vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  93.75% { /*DOWN_LEFT RUSHING IN BALL5*/
+    box-shadow: calc(3vw + (10vw - 8px) / 2) calc(39vh + 10vw) #E40000;
+  }
+  
+  96.875% { /*LEFT_UP RUSHING OUT BALL5*/
+    box-shadow: 0 calc(35vh + 10vw) #E40000;
+  }
+  
+  100% { /*HALF_UP ===END ANIMATION===*/
+    box-shadow: 0 calc(25vh + (10vh + 10vw - 8px) / 2) #E40000;
+  }
+}
+
+@keyframes squirrel2and3move {
+  3.125% {
+    box-shadow: 0 calc(25vh - 8px) #E400007A;
+  }
+  
+  6.25% {
+    box-shadow: calc(3vw + (10vw - 8px) / 2) 21vh #E400007A;
+  }
+  
+  9.375% {
+    box-shadow: calc(13vw + (2vw - 8px) / 2) calc(25vh - 8px) #E400007A;
+  }
+  
+  12.5% {
+    box-shadow: calc(13vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E400007A;
+  }
+  
+  15.625% {
+    box-shadow: calc(13vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) calc(39vh + 10vw) #E400007A;
+  }
+  
+  18.75% {
+    box-shadow: calc(25vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E400007A;
+  }
+  
+  21.875% {
+    box-shadow: calc(25vw + (2vw - 8px) / 2) calc(25vh - 8px) #E400007A;
+  }
+  
+  25% {
+    box-shadow: calc(25vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) 21vh #E400007A;
+  }
+  
+  28.125% {
+    box-shadow: calc(37vw + (2vw - 8px) / 2) calc(25vh - 8px) #E400007A;
+  }
+  
+  31.25% {
+    box-shadow: calc(37vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E400007A;
+  }
+  
+  34.375% {
+    box-shadow: calc(37vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) calc(39vh + 10vw) #E400007A;
+  }
+  
+  37.5% {
+    box-shadow: calc(49vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E400007A;
+  }
+  
+  40.625% {
+    box-shadow: calc(49vw + (2vw - 8px) / 2) calc(25vh - 8px) #E400007A;
+  }
+  
+  43.75% {
+    box-shadow: calc(49vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) 21vh #E400007A;
+  }
+  
+  46.875% {
+    box-shadow: calc(61vw + (2vw - 8px) / 2) calc(25vh - 8px) #E400007A;
+  }
+  
+  50% {
+    box-shadow: calc(61vw + (2vw - 8px) / 2) calc(25vh + (10vh + 10vw - 8px) / 2) #E400007A;
+  }
+  
+  53.125% {
+    box-shadow: calc(61vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  56.25% {
+    box-shadow: calc(49vw + (2vw - 8px) / 2 + (10vw -8px) / 2) calc(39vh + 10vw) #E40000;
+  }
+  
+  59.375% {
+    box-shadow: calc(49vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  62.5% {
+    box-shadow: calc(49vw + (2vw - 8px) / 2) calc(25vh - 10px) #E40000;
+  }
+  
+  65.625% {
+    box-shadow: calc(37vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) 21vh #E40000;
+  }
+  
+  68.75% {
+    box-shadow: calc(37vw + (2vw - 8px) / 2) calc(25vh - 8px) #E40000;
+  }
+  
+  71.875% {
+    box-shadow: calc(37vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  75% {
+    box-shadow: calc(25vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) calc(39vh + 10vw) #E40000;
+  }
+  
+  78.125% {
+    box-shadow: calc(25vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  81.25% {
+    box-shadow: calc(25vw + (2vw - 8px) / 2) calc(25vh - 8px) #E40000;
+  }
+  
+  84.375% {
+    box-shadow: calc(13vw + (2vw - 8px) / 2 + (10vw - 8px) / 2) 21vh #E40000;
+  }
+  
+  87.5% {
+    box-shadow: calc(13vw + (2vw - 8px) / 2) calc(25vh - 8px) #E40000;
+  }
+  
+  90.625% {
+    box-shadow: calc(13vw + (2vw - 8px) / 2) calc(35vh + 10vw) #E40000;
+  }
+  
+  93.75% {
+    box-shadow: calc(3vw + (10vw - 8px) / 2) calc(39vh + 10vw) #E40000;
+  }
+  
+  96.875% {
+    box-shadow: 0 calc(35vh + 10vw) #E40000;
+  }
+  
+  100% {
+    box-shadow: 0 calc(25vh + (10vh + 10vw - 8px) / 2) #E40000;
+  }
+}
+
+@keyframes loading {
+  0% {
+    top: -8px;
+  }
+  
+  20% {
+    top: 8px;
+  }
+  
+  40% {
+    top: -8px;
+  }
+  
+  60% {
+    top: 8px;
+  }
+  
+  80% {
+    top: -8px;
+  }
+  
+  100% {
+    top: 8px;
+  }
+}
